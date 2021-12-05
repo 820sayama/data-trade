@@ -8,6 +8,9 @@
 | encrypted_password | string         | null: false                  |
 | nickname           | string         | null: false                  |
 
+has_many :orders
+has_many :items
+
 # itemsテーブル
 
 | Column             | Type           | Options                      |
@@ -17,6 +20,8 @@
 | explanation        | text       　 　| null: false                  |
 | user               | references     | null: false,  foreign_key   　|
 
+belongs_to :user
+has_one :order
 
 # ordersテーブル
 
@@ -24,3 +29,6 @@
 | ------------------ | ------------   | --------------------------   |
 | user               | references     | null: false,foreign_key: true|
 | item               | references     | null: false ,foreign_key:true|          
+
+belongs_to :user
+belongs_to :item
