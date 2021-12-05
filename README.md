@@ -12,10 +12,10 @@
 
 | Column             | Type           | Options                      |
 | ------------------ | ------------   | --------------------------   |
-| product          　| string    　　    | null: false                |
+| product            | string    　　    | null: false                |
 | price              | integer   　　  | null: false                  |
 | explanation        | text       　 　| null: false                  |
-| user        　　　  | references     | null: false,  foreign_key   　|
+| user               | references     | null: false,  foreign_key   　|
 
 
 # ordersテーブル
